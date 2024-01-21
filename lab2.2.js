@@ -17,5 +17,5 @@ const duLieuNhap = [
 
 duLieuNhap.forEach((item, index) => {
   const ketQuaCamelCase = chuyenDoiCamelCase(item);
-  console.log(`${ketQuaCamelCase} ${"✅".repeat(index + 1)}`);
+  console.log(`${ketQuaCamelCase} ${"\u2705".repeat(index + 1)}`);
 });

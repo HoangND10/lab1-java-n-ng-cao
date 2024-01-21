@@ -4,11 +4,10 @@ const chuyenBay =
 const getMa = (str) => str.slice(0, 3).toUpperCase();
 for (const chuyen of chuyenBay.split("+")) {
   const [loai, diemDi, diemDen, gio] = chuyen.split(";");
-  const ketQua = `${loai.startsWith("_Delayed") ? "🛑" : ""}${loai.replaceAll(
-    "_",
-    " "
-  )} ${getMa(diemDi)} ${getMa(diemDen)} (${gio.replace(":", "h")})`.padStart(
-    36
-  );
+  const ketQua = `${
+    loai.startsWith("_Delayed") ? "\u{1F6D1}" : ""
+  }${loai.replaceAll("_", " ")} ${getMa(diemDi)} ${getMa(
+    diemDen
+  )} (${gio.replace(":", "h")})`.padStart(36);
   console.log(ketQua);
 }
